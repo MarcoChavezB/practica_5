@@ -1,13 +1,44 @@
-body{
+*{
     margin: 0;
     padding: 0;
 }
 
 .grid-container{
+    color: white;
     background-color: yellow;
     display: grid;
+    grid-gap: 5px;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
-    grid-gap: 20px;
     height: 100vh;
+}
+
+div{
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+}
+.grid-container div:first-child{
+    background-color: violet;
+    grid-column: 1/-1;
+}
+
+.grid-container div:last-child{
+    background-color: yellowgreen;
+    grid-column: 1/-1;
+}
+
+.grid-container div:nth-child(2){
+    background-color: turquoise;
+    grid-column: 1;
+}
+
+.grid-container div:nth-child(4){
+    background-color: teal;
+    grid-column:3/4;
+}
+
+.grid-container div:nth-child(3){
+    background-color: aqua;
+    grid-column: 2/3;
 }
